@@ -1,0 +1,124 @@
+# ============================================================
+# weekly_routine.yaml  -  the ONLY file you edit by hand.
+# See docs/contracts.md for the full format.
+# ============================================================
+
+# "auto" = use the timezone of the device opening the app.
+# Or set an IANA name, e.g. "Asia/Dhaka".
+timezone: auto
+
+# Prayer-time anchors used inside time ranges below.
+# 24-hour clock. Approximate values - update them seasonally.
+anchors:
+  Fajr: "04:45"
+  Zuhr: "12:05"
+  Asr: "15:35"
+  Magrib: "18:00"
+  Esha: "19:20"
+
+# Time tokens: "HH:MM" or an anchor name (Fajr, Zuhr, Asr, Magrib, Esha).
+# A block is "<start>-<end>". Blocks must not cross midnight.
+days:
+  Sat:
+    - time: "Fajr-8:00"
+      task: "Structured Programming Language"
+    - time: "8:00-10:00"
+      task: "Leetcode"
+    - time: "10:00-Zuhr"
+      task: "BCS CSE: Operating Systems"
+    - time: "13:00-14:00"
+      task: "Lunch + Rest"
+    - time: "14:00-Asr"
+      task: "Project"
+    - time: "Asr-Magrib"
+      task: "BCS General: Bangla + English"
+    - time: "Magrib-Esha"
+      task: "Weekly Planning & Journal"
+
+  Sun:
+    - time: "Fajr-8:00"
+      task: "Data Structures & Algorithms"
+    - time: "8:00-10:00"
+      task: "Leetcode + Commit"
+    - time: "10:00-Zuhr"
+      task: "BCS CSE: Computer Architecture & Organization"
+    - time: "13:00-14:00"
+      task: "Lunch + Transport"
+    - time: "14:00-Asr"
+      task: "CSE706 - Advanced Parallel Algorithm - 08D-14C"
+    - time: "Asr-Magrib"
+      task: "CSE706 - Advanced Parallel Algorithm - 08D-14C"
+    - time: "Magrib-Esha"
+      task: "Transport"
+
+  Mon:
+    - time: "Fajr-8:00"
+      task: "Object-Oriented Programming Language"
+    - time: "8:00-10:00"
+      task: "Project"
+    - time: "10:00-Zuhr"
+      task: "BCS CSE: Software Engineering"
+    - time: "13:00-14:00"
+      task: "Lunch + Rest"
+    - time: "14:00-Asr"
+      task: "Project"
+    - time: "Asr-Magrib"
+      task: "Coursework"
+
+  Tue:
+    - time: "Fajr-8:00"
+      task: "Mathematics I & II"
+    - time: "8:00-10:00"
+      task: "Project"
+    - time: "10:00-Zuhr"
+      task: "BCS CSE: Computer Networks"
+    - time: "13:00-14:00"
+      task: "Lunch + Rest"
+    - time: "14:00-Asr"
+      task: "Project and Transport"
+    - time: "Asr-Magrib"
+      task: "CSE717 - Mathematical Programming - 08H-22C"
+    - time: "Magrib-Esha"
+      task: "CSE717 - Mathematical Programming - 08H-22C"
+
+  Wed:
+    - time: "Fajr-8:00"
+      task: "Physics"
+    - time: "8:00-10:00"
+      task: "Project"
+    - time: "10:00-Zuhr"
+      task: "AMIE: Digital Logic Design"
+    - time: "13:00-14:00"
+      task: "Lunch + Rest"
+    - time: "14:00-Asr"
+      task: "Project"
+    - time: "Asr-Magrib"
+      task: "BCS General: Bangladesh Affairs + International Affairs"
+
+  Thu:
+    - time: "Fajr-8:00"
+      task: "Database Management Systems"
+    - time: "8:00-10:00"
+      task: "Project"
+    - time: "10:00-Zuhr"
+      task: "BCS CSE: AI + Cybersecurity"
+    - time: "13:00-14:00"
+      task: "Lunch + Rest"
+    - time: "14:00-Asr"
+      task: "Project"
+    - time: "Asr-Magrib"
+      task: "IELTS - Reading and Writing"
+
+  Fri:
+    - time: "Fajr-8:00"
+      task: "Mathematical Reasoning & Mental Ability"
+    - time: "8:00-10:00"
+      task: "Leetcode + Commit"
+    - time: "10:00-Zuhr"
+      task: "AMIE: English & Economics"
+    - time: "13:00-14:00"
+      task: "Jummah"
+    - time: "14:00-Asr"
+      task: "BCS Technical: Weekly Revision + MCQs"
+    - time: "Asr-Magrib"
+      task: "IELTS - Reading and Writing"
