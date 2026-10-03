@@ -1,5 +1,7 @@
 # Routine Tracker
 
+[![Fork this repo](https://img.shields.io/badge/Fork%20this%20repo-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Red1-Rahman/Weekly-Planner/fork)
+
 A minimal weekly-routine dashboard. You edit one file, `weekly_routine.yaml`. The app shows today's blocks, a countdown to the current block (ring or hourglass), lets you tick off routine blocks, and lets you create same-day tasks.
 
 Anyone can view it. Only the owner (you) can add, change, or tick things, after logging in with a password.
