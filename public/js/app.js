@@ -8,6 +8,7 @@ const formatHMS = (sec) => `${pad(Math.floor(sec / 3600))}:${pad(Math.floor((sec
 const clamp = (x) => Math.min(1, Math.max(0, x));
 const RING_C = 2 * Math.PI * 54;
 const TOKEN_KEY = 'ownerToken';
+const FORK_DISMISS_KEY = 'forkBannerDismissed';
 
 const state = {
   routine: null,
@@ -54,6 +55,18 @@ function showBanner(msg) {
   b.classList.remove('hidden');
   clearTimeout(showBanner.timer);
   showBanner.timer = setTimeout(() => b.classList.add('hidden'), 4000);
+}
+
+// ---- fork banner ----------------------------------------------------------
+
+function setupForkBanner() {
+  const banner = $('#fork-banner');
+  if (localStorage.getItem(FORK_DISMISS_KEY) === 'yes') return;
+  banner.classList.remove('hidden');
+  $('#fork-dismiss').addEventListener('click', () => {
+    localStorage.setItem(FORK_DISMISS_KEY, 'yes');
+    banner.classList.add('hidden');
+  });
 }
 
 // ---- auth -----------------------------------------------------------------
@@ -350,6 +363,7 @@ async function deleteTask(id) {
 // ---- boot -----------------------------------------------------------------
 
 async function init() {
+  setupForkBanner();
   $('#login-toggle').addEventListener('click', () => $('#login-panel').classList.toggle('hidden'));
   $('#login-cancel').addEventListener('click', () => $('#login-panel').classList.add('hidden'));
   $('#login-form').addEventListener('submit', onLogin);
