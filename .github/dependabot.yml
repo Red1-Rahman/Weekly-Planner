@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # npm packages (express, yaml, @libsql/client)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types: ["minor", "patch"]
+
+  # GitHub Actions (only if you add workflows later)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
