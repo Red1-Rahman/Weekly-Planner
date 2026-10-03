@@ -7,6 +7,19 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen">
+  <!-- Fork banner (dismissible) -->
+  <div id="fork-banner" class="hidden bg-white border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 py-2 flex items-center justify-between gap-3 text-sm text-slate-600">
+      <p>
+        Want your own planner?
+        <a href="https://github.com/Red1-Rahman/Weekly-Planner/fork" target="_blank" rel="noopener"
+           class="font-medium text-slate-900 underline underline-offset-2 hover:text-emerald-700">Fork this repo</a>
+        and edit one YAML file.
+      </p>
+      <button id="fork-dismiss" aria-label="Dismiss" class="text-slate-400 hover:text-slate-700 px-1">✕</button>
+    </div>
+  </div>
+
   <header class="max-w-5xl mx-auto px-4 pt-6 flex flex-wrap items-center justify-between gap-3">
     <h1 class="text-xl font-semibold">Routine</h1>
     <div class="flex flex-wrap items-center gap-2">
